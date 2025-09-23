@@ -1,2 +1,2 @@
-# code-challanges
+# code-challenges
 Code challenges in various languages
