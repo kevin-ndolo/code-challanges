@@ -24,4 +24,17 @@ print(f"kevin: {students["kevin"]}")
 
 
 #   Calculate class average
-def cal
+def calculate_class_average():
+    total_score = 0
+    total_subjects = 0
+
+    for student in students:
+        for subject, score in students[student].items():
+            total_score += score
+            total_subjects += 1
+
+    if total_subjects == 0:
+        return 0
+    return total_score / total_subjects
+
+print("Class average:", calculate_class_average())
