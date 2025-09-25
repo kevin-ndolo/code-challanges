@@ -65,7 +65,7 @@ Deque stands for "double-ended queue." It's a data structure that allows you to 
 **Why use it:**
 When you need to frequently add/remove items from both ends of your collection, or when you need built-in rotation functionality. Regular lists have to shift all elements when you modify the front, which is slow for large lists.
 
-**Perfect for:** queues, rotating buffers, sliding windows, and operations like the rotation you're doing.
+**Perfect for:** queues, rotating buffers, sliding windows, and operations like rotations.
 
 """
 
