@@ -84,6 +84,9 @@ console.log(leastAndMostCommonItem(countFrequency(items)))
 
 
 
+
+
+
 // Handle both primitive values and objects
 
 const items2 = [
