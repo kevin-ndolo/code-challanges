@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  web:
+    build: ./web
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_ENV=production
+    depends_on:
+      - db
+      - redis
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/health"]
+      interval: 10s
+      retries: 3
+    restart: always
+    networks:
+      - app_net
+
+  db:
+    image: postgres:14
+    env_file: .env
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    restart: always
+    networks:
+      - app_net
+
+  redis:
+    image: redis:7
+    restart: always
+    networks:
+      - app_net
+
+volumes:
+  db_data:
+
+networks:
+  app_net:
+    driver: bridge
