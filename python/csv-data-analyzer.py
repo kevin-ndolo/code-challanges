@@ -48,7 +48,6 @@ def analyze_sales_data(file_path):
 
 
 
-
 analyze_sales_data("python/csv-sample-data.csv")
 
 
